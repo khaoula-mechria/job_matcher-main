@@ -1,0 +1,165 @@
+/* Company logo styling */
+.company-logo {
+  display: block;
+  max-width: 64px;
+  max-height: 64px;
+  margin-right: 12px;
+  border-radius: 8px;
+  object-fit: contain;
+  background: #f3f3f3;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+}
+
+.job-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+/* General layout */
+.getjob-container {
+  min-height: 100vh;
+  background-color: #f7f8fa;
+  padding: 60px 20px;
+  font-family: 'Inter', sans-serif;
+  color: #333;
+}
+
+/* Header */
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #1e1e2f;
+}
+
+/* Job cards layout */
+.jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Individual job card */
+.job-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Job title */
+.job-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2b2b3a;
+  margin-bottom: 10px;
+}
+
+/* Posted date */
+.posted-date {
+  font-size: 0.9rem;
+  color: #777;
+  margin: 8px 0 16px;
+}
+
+.time-note {
+  color: #b45309;
+  background: #fff7ed;
+  padding: 6px 10px;
+  border-radius: 6px;
+  display: inline-block;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.description-label {
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+.job-description {
+  color: #1f2937; /* slightly darker, linkedin-like */
+  line-height: 1.4;
+  margin: 8px 0 12px;
+  max-height: none;
+  font-size: 14px; /* LinkedIn uses ~14px */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.toggle-desc {
+  background: transparent;
+  border: none;
+  color: #6b7280; /* gray */
+  cursor: pointer;
+  font-weight: 600;
+  padding: 2px 0;
+  font-size: 12px;
+  text-transform: none;
+}
+
+/* inline variant and subtle hover for the collapsed preview */
+.toggle-desc.inline {
+  display: inline-block;
+  margin-left: 6px;
+  color: #6b7280;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.toggle-desc.inline:hover {
+  color: #374151; /* slightly darker gray */
+  text-decoration: none; /* keep it subtle */
+  opacity: 0.95;
+}
+
+/* View job button */
+.view-job {
+  display: inline-block;
+  background-color: #4f46e5;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px 16px;
+  border-radius: 8px;
+  transition: background-color 0.25s ease, transform 0.15s ease;
+}
+
+.view-job:hover {
+  background-color: #4338ca;
+  transform: scale(1.05);
+}
+
+/* Empty state */
+.no-jobs {
+  text-align: center;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* Error state */
+.error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.error-message {
+  background-color: #fdecea;
+  color: #b71c1c;
+  padding: 16px 24px;
+  border-radius: 8px;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(183, 28, 28, 0.2);
+}
