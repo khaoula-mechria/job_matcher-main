@@ -1,3 +1,13 @@
+"""
+Scraper idea:
+- Build LinkedIn search URLs from user inputs (keywords, location, time range).
+- Request paginated job-card results and extract structured job details.
+- Enrich each job with full description and logo metadata when possible.
+- Expose scraping through Flask endpoints:
+  - POST /search_jobs to run scraping and save results.
+  - GET /get_jobs to return the latest saved jobs.
+"""
+
 #importing different libraries
 from dataclasses import dataclass
 from typing import List, Optional

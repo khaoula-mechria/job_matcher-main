@@ -1,16 +1,43 @@
-# React + Vite
+# Job Matcher Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a React + Vite frontend for searching and viewing job listings.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Search jobs by keywords and location
+- Limit number of jobs returned
+- Filter by time range (none, 1 hour, 24 hours)
+- View fetched jobs in a card-based layout
+- Expand/collapse long job descriptions
+- Open original job links in a new tab
 
-## React Compiler
+## Routes
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- `/` → Job search form
+- `/GetJobs` → Job results list
 
-## Expanding the ESLint configuration
+## Backend API Requirements
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The frontend expects a backend running at `http://127.0.0.1:5000` with:
+
+- `POST /search_jobs` to submit search criteria
+- `GET /get_jobs` to fetch the latest job results
+
+## Getting Started
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Start the development server:
+   ```bash
+   npm run dev
+   ```
+3. Open the app in your browser (Vite prints the local URL in the terminal).
+
+## Available Scripts
+
+- `npm run dev` — start dev server
+- `npm run build` — create production build
+- `npm run preview` — preview production build
+- `npm run lint` — run ESLint
